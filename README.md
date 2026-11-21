@@ -2,7 +2,9 @@
 
 An open hardware, ESP32-S3 based pocket multitool for exploring radio, NFC, RFID, infrared and 1-Wire, inspired by the Flipper Zero. It is designed in KiCad, built mostly from off-the-shelf modules so it can be hand-soldered at home, and runs its own custom firmware.
 
-> **Status: work in progress.** The schematic (rev 0.4) passes ERC and imports cleanly into the PCB editor. Component placement (v1) is done; the board is **not routed and has not been built or tested yet**. Always check pinouts against the datasheets of the parts you actually buy.
+![PCB front](docs/images/pcb_front.png)
+
+> **Status: work in progress.** The schematic (rev 0.4) passes ERC and imports cleanly into the PCB editor. Component placement (v1) is done and PCB routing is in progress; the board **has not been built or tested yet**. Always check pinouts against the datasheets of the parts you actually buy.
 
 > **Note:** This is an independent hobby project. It is **not** affiliated with Flipper Devices and is **not** compatible with the official Flipper Zero firmware.
 
@@ -24,7 +26,25 @@ An open hardware, ESP32-S3 based pocket multitool for exploring radio, NFC, RFID
 | Expansion | 2x9 GPIO header (UART, free GPIOs, 3.3 V, 5 V) |
 | Power | Li-Po battery, MCP73832 USB charger, power-path circuit, 3.3 V LDO, battery voltage monitoring |
 
+## System overview
+
+![Block diagram](docs/images/block_diagram.png)
+
 ## Hardware overview
+
+![Module placement](docs/images/pcb_placement.png)
+
+<table>
+  <tr>
+    <td><img src="docs/images/pcb_layers.png" alt="Copper layers (red = front, blue = back)"></td>
+    <td><img src="docs/images/pcb_back.png" alt="PCB back side"></td>
+  </tr>
+  <tr>
+    <td align="center">Copper layers (red = front, blue = back)</td>
+    <td align="center">Back side</td>
+  </tr>
+</table>
+
 
 - **Board:** 130 x 64 mm, 2 layers, rounded corners.
 - **Assembly-friendly:** all SMD parts sit on the front side, so the board can be soldered by hand or on a hot plate.
@@ -62,6 +82,7 @@ GPIO 35-37 and 45-46 are routed to the header (35-37 are only free on quad-PSRAM
 
 - KiCad project (schematic and PCB), saved in KiCad 9 format (opens in KiCad 9 and 10)
 - `place_diy_flipper.py` - KiCad scripting-console script that applies the v1 component placement
+- `docs/images/` - board renders and diagrams used in this README (generated from the KiCad files, not photos of a built board)
 
 ## Limitations
 
@@ -78,7 +99,7 @@ Compared with a real Flipper Zero:
 - [x] Schematic (ERC clean)
 - [x] Footprints assigned, netlist imported into PCB
 - [x] Component placement v1
-- [ ] PCB routing and DRC
+- [ ] PCB routing and DRC (in progress)
 - [ ] First prototype build and bring-up
 - [ ] Custom firmware (display UI, input, SD card, IR, NFC, Sub-GHz, RFID, iButton)
 - [ ] Enclosure
