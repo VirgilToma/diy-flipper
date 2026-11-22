@@ -188,13 +188,27 @@ GPIO 35-37 and 45-46 are routed to the header. GPIO 35-37 are only free on quad-
 
 ## Repository contents
 
-- **KiCad project:** `diy_flipper.kicad_pro`, `.kicad_sch` and `.kicad_pcb`. They are saved with KiCad 10 and need KiCad 10 or newer.
-- **`DIYFlipper.kicad_sym` and `sym-lib-table`:** the project's symbol library, with all the symbols used in the schematic.
-- **`place_diy_flipper.py`:** KiCad scripting-console script that applies the v1 component placement. It is only needed to redo the placement from scratch.
-- **`3D_Models/`:** 3D model of the OLED module.
-- **`docs/images/`:** board renders and diagrams used in this README. They are generated from the KiCad files and are not photos.
-- **`docs/schematic.pdf`:** the schematic as a zoomable PDF.
-- **`docs/BOM.csv`:** bill of materials.
+```
+diy-flipper/
+├── README.md
+├── hardware/                  KiCad 10 project (open diy_flipper.kicad_pro)
+│   ├── diy_flipper.kicad_pro
+│   ├── diy_flipper.kicad_sch
+│   ├── diy_flipper.kicad_pcb
+│   ├── DIYFlipper.kicad_sym   project symbol library
+│   ├── sym-lib-table
+│   ├── 3D_Models/             3D model of the OLED module, used by the PCB 3D view
+│   └── place_diy_flipper.py   scripting-console script for the v1 placement
+├── firmware/                  custom firmware (not started yet)
+├── enclosure/                 3D-printable case (not started yet)
+└── docs/
+    ├── BOM.csv                bill of materials
+    ├── schematic.pdf          zoomable schematic
+    └── images/                renders and diagrams used in this README
+```
+
+- The KiCad files need KiCad 10 or newer. Keep everything in `hardware/` together: the project finds its symbol library and the OLED 3D model relative to the project folder.
+- The images in `docs/images/` are generated from the KiCad files; they are not photos of a built board.
 
 ## Limitations
 
