@@ -4522,7 +4522,7 @@
 					)
 				)
 			)
-			(property "Description" "PN532 NFC module (I2C mode), 1x6 header"
+			(property "Description" "PN532 V3/V4 NFC module in I2C mode (S1=ON, S2=OFF). Pins 1-4 match the module I2C header GND VCC SDA SCL; pin 5 = short wire to module IRQ"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -4548,9 +4548,9 @@
 			)
 			(symbol "PN532_MODULE_1_1"
 				(pin passive line
-					(at 7.62 11.43 270)
+					(at 7.62 -11.43 90)
 					(length 2.54)
-					(name "VCC"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4566,9 +4566,9 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 -11.43 90)
+					(at 7.62 11.43 270)
 					(length 2.54)
-					(name "GND"
+					(name "VCC"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4630,24 +4630,6 @@
 						)
 					)
 					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 12.7 -1.27 180)
-					(length 2.54)
-					(name "RSTPDN"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -7169,7 +7151,7 @@
 		)
 		(uuid "fd1e0453-7cab-4466-9d8f-e8991c4ac5e1")
 	)
-	(text "Set the module's switches to I2C.\nWire the header to match your module."
+	(text "PN532 V3/V4: switches S1=ON, S2=OFF (I2C).\nJ7 pins 1-4 = module I2C header (GND VCC SDA SCL).\nJ7 pin 5 = short wire to IRQ on the module top header.\nRSTPDN not used (module has its own reset), IO18 is free."
 		(exclude_from_sim no)
 		(at 368.3 261.62 0)
 		(effects
@@ -7862,6 +7844,10 @@
 	(no_connect
 		(at 208.28 219.71)
 		(uuid "4876262c-15b1-4ef7-a616-410b476b85e1")
+	)
+	(no_connect
+		(at 116.84 48.26)
+		(uuid "51e7d85b-7dca-456c-a15c-f8750a5b7dad")
 	)
 	(no_connect
 		(at 440.69 40.64)
@@ -9115,16 +9101,6 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 48.26) (xy 119.38 48.26)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5b2fb113-a9c2-4c49-a732-23b7c3eac52e")
-	)
-	(wire
-		(pts
 			(xy 561.34 74.93) (xy 563.88 74.93)
 		)
 		(stroke
@@ -9182,16 +9158,6 @@
 			(type default)
 		)
 		(uuid "60e3a912-b6dc-4ab4-a4f7-c7d6fed46323")
-	)
-	(wire
-		(pts
-			(xy 419.1 224.79) (xy 421.64 224.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "63b55dba-5060-4950-9ec5-cd808619d188")
 	)
 	(wire
 		(pts
@@ -11703,16 +11669,6 @@
 		)
 		(uuid "3c729ddd-0610-4bd3-becc-7ed4a52717fa")
 	)
-	(label "NFC_RST"
-		(at 119.38 48.26 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "3f0a7ec8-8fc9-4155-a5cd-16aae02b12c1")
-	)
 	(label "VBAT_SENSE"
 		(at 73.66 63.5 180)
 		(effects
@@ -12282,16 +12238,6 @@
 			(justify left bottom)
 		)
 		(uuid "cd273a60-baf9-49c3-ab0e-4520b0fc5519")
-	)
-	(label "NFC_RST"
-		(at 421.64 224.79 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ce704f1c-564c-4058-83fc-84ae596be65c")
 	)
 	(label "GPIO36"
 		(at 591.82 67.31 0)
@@ -23299,7 +23245,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
 			(at 406.4 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -23321,7 +23267,7 @@
 				)
 			)
 		)
-		(property "Description" "PN532 NFC module (I2C mode), 1x6 header"
+		(property "Description" "PN532 V3/V4 NFC module in I2C mode (S1=ON, S2=OFF). Pins 1-4 match the module I2C header GND VCC SDA SCL; pin 5 = short wire to module IRQ"
 			(at 406.4 223.52 0)
 			(hide yes)
 			(show_name no)
@@ -23340,9 +23286,6 @@
 		)
 		(pin "5"
 			(uuid "383202dd-76cb-49b4-bd06-42126f61f472")
-		)
-		(pin "6"
-			(uuid "f2312d32-dfa6-4013-a70a-f826cdabe326")
 		)
 		(pin "1"
 			(uuid "7c62cdae-5044-4b93-94bc-aba241056d35")
