@@ -89,7 +89,6 @@
 		)
 		(capping no)
 		(filling no)
-		(zone_defaults)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
@@ -1733,7 +1732,7 @@
 		(descr "Micro SD, SMD, right-angle, push-pull (https://www.hirose.com/product/en/download_file/key_name/DM3AT-SF-PEJM5/category/Drawing%20(2D)/doc_file_id/44099/?file_category_id=6&item_id=06090031000&is_series=)")
 		(tags "Micro SD")
 		(property "Reference" "microSD"
-			(at -9 0.6 180)
+			(at -9 0.6 0)
 			(layer "F.SilkS")
 			(uuid "0ef90c1c-92cc-459d-8141-597b868aa88f")
 			(effects
@@ -2196,7 +2195,7 @@
 			(uuid "2ad8a177-1f1c-46f4-940c-8107472a8e86")
 		)
 		(fp_text user "KEEPOUT"
-			(at -6.85 -3.25 180)
+			(at -6.85 -3.25 0)
 			(layer "Cmts.User")
 			(uuid "672da5e1-a4bc-4123-8cd5-cac2d78c8d66")
 			(effects
@@ -2218,7 +2217,7 @@
 			)
 		)
 		(fp_text user "KEEPOUT"
-			(at -5.775 2.375 180)
+			(at -5.775 2.375 0)
 			(layer "Cmts.User")
 			(uuid "d17f63f9-23f7-4153-8ca5-66ea169fe85a")
 			(effects
@@ -4125,7 +4124,7 @@
 		(descr "USB Type-C receptacle for USB 2.0 and PD, http://www.krhro.com/uploads/soft/180320/1-1P320120243.pdf")
 		(tags "usb usb-c 2.0 pd")
 		(property "Reference" "J1"
-			(at 0 -5.645 270)
+			(at 0 -5.645 90)
 			(layer "F.SilkS")
 			(uuid "19621399-bdaf-4d3c-961d-643a2705a709")
 			(effects
@@ -4136,7 +4135,7 @@
 			)
 		)
 		(property "Value" "USB-C 16P"
-			(at 0 5.1 270)
+			(at 0 5.1 90)
 			(layer "F.Fab")
 			(uuid "13fd0c7e-e987-4c6e-8f53-f0a455c28064")
 			(effects
@@ -4316,7 +4315,7 @@
 			(uuid "1bce3f5f-51e3-4145-b43a-462a45145854")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 270)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(uuid "47676e36-bc62-4aef-b33c-042cab58d315")
 			(effects
@@ -4549,7 +4548,7 @@
 			(uuid "48873943-9671-480a-940d-0cff77920a1c")
 		)
 		(embedded_fonts no)
-		(model "${KICAD10_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_HRO_TYPE-C-31-M-12.step"
+		(model "${KICAD10_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -25010,6 +25009,40 @@
 			(justify mirror)
 		)
 	)
+	(gr_text "Every machine is a smoke machine if you operate it wrong enough"
+		(at 134.9 94 0)
+		(layer "B.SilkS")
+		(uuid "cb2a0df3-adc2-4bca-a602-9e74e10e1644")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text_box "Design name: DIY Flipper\nDesigner : Bullet\nFabrication Type: Modular \nDesign: Experimental\nVersion: 1.0\n"
+		(start 56.3 48.45)
+		(end 87.7 64.55)
+		(margins 1.0025 1.0025 1.0025 1.0025)
+		(layer "B.SilkS")
+		(uuid "3995926a-7ec3-4b95-91fc-09804803743b")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left top mirror)
+		)
+		(border yes)
+		(stroke
+			(width 0.5)
+			(type dash_dot_dot)
+		)
+		(knockout no)
+	)
 	(segment
 		(start 82 52.275)
 		(end 80.9 53.375)
@@ -40688,11 +40721,11 @@
 				(xy 88.83032 56.810041) (xy 88.859025 56.804509) (xy 88.864697 56.806779) (xy 88.870777 56.806203)
 				(xy 88.896747 56.81961) (xy 88.92389 56.830477) (xy 88.932364 56.837998) (xy 88.932861 56.838255)
 				(xy 88.933078 56.838632) (xy 88.93492 56.840267) (xy 90.129122 58.034469) (xy 90.129123 58.03447)
-				(xy 90.20369 58.109037) (xy 90.295016 58.161764) (xy 90.396876 58.189057) (xy 90.502329 58.189057)
-				(xy 91.771302 58.189057) (xy 91.838341 58.208742) (xy 91.858983 58.225376) (xy 93.583107 59.9495)
-				(xy 93.905102 60.271494) (xy 93.938587 60.332817) (xy 93.933603 60.402509) (xy 93.891731 60.458442)
-				(xy 93.826267 60.482859) (xy 93.785331 60.478951) (xy 93.781563 60.477941) (xy 93.768719 60.4745)
-				(xy 93.768718 60.4745) (xy 93.451571 60.4745) (xy 93.384532 60.454815) (xy 93.36389 60.438181) (xy 93.32019 60.394481)
+				(xy 90.20369 58.109037) (xy 90.295016 58.161764) (xy 90.396876 58.189057) (xy 91.771302 58.189057)
+				(xy 91.838341 58.208742) (xy 91.858983 58.225376) (xy 93.583107 59.9495) (xy 93.905102 60.271494)
+				(xy 93.938587 60.332817) (xy 93.933603 60.402509) (xy 93.891731 60.458442) (xy 93.826267 60.482859)
+				(xy 93.785331 60.478951) (xy 93.781563 60.477941) (xy 93.768719 60.4745) (xy 93.768718 60.4745)
+				(xy 93.451571 60.4745) (xy 93.384532 60.454815) (xy 93.36389 60.438181) (xy 93.32019 60.394481)
 				(xy 93.320182 60.394475) (xy 93.183263 60.315426) (xy 93.183259 60.315424) (xy 93.183257 60.315423)
 				(xy 93.03053 60.2745) (xy 92.872416 60.2745) (xy 92.719689 60.315423) (xy 92.719682 60.315426) (xy 92.582763 60.394475)
 				(xy 92.582759 60.394478) (xy 92.523061 60.454176) (xy 92.461737 60.48766) (xy 92.392046 60.482675)
